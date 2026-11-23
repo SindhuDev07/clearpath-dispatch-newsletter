@@ -1,0 +1,50 @@
+CLEARPATH DISPATCH — TECHNICAL SUMMARY Issue 07 / November 2026
+
+1.   IMPLEMENTATION
+- Delivered a responsive HTML email newsletter in newsletter.html.
+- Used inline CSS on rendered elements and nested presentation tables for email-oriented layout.
+- Used Arial, Helvetica, sans-serif fallbacks.
+- Kept the newsletter content column at approximately 600px.
+- Used Cloudinary public HTTPS delivery URLs for the four newsletter images:
+  - clearpath_logo.png
+  - hero_workflow.webp
+  - card_headings.webp
+  - card_image_alt.webp
+- Retained the original image assets in the ASSETS folder.
+- No JavaScript, external stylesheet, or external web-font dependency is used.
+- Images are externally hosted on Cloudinary. Hosting is configured for these image URLs; no email sender or mailing platform has been configured as part of this deliverable.
+
+2. HTML VALIDATION
+- Checked with the W3C Nu HTML Checker.
+- Reported result: “Document checking completed. No errors or warnings to show.”
+- Earlier validation issues were corrected before the final validation.
+
+3. RESPONSIVE BROWSER TESTING
+- Browser viewport checks were performed at:
+  - 600px
+  - 390px
+  - 320px
+- The supplied browser screenshots were reviewed for layout, card stacking, image visibility, and horizontal overflow.
+- The supplied screenshots showed no obvious horizontal overflow.
+- Genuine browser screenshots should be retained in TEST_SCREENSHOTS.
+
+4. EMAIL-CLIENT TESTING
+- Gmail desktop: tested; newsletter rendered and images displayed.
+- Gmail mobile: tested by the project owner; reported as displaying correctly.
+- Outlook desktop: tested; newsletter rendered and images displayed.
+- Outlook mobile: not tested.
+- Apple Mail: not tested.
+- These results describe the actual client checks performed; no simulated email-client screenshots are used.
+
+5. LINKS AND ACCESSIBILITY
+- The newsletter includes the requested W3C Writing Tips, image tutorial, LinkedIn, and Mastodon destinations.
+- The primary and secondary CTA/link elements were visually checked in the received email.
+- A separate automated destination-by-destination link audit has not been documented here.
+- Alternative text is included for the logo, hero image, and both feature images.
+- Text content remains selectable and the main CTA does not require JavaScript.
+
+6. TESTING LIMITATIONS
+- Email-client coverage is limited to Gmail desktop, Gmail mobile, and Outlook desktop.
+- Outlook mobile and Apple Mail were not tested.
+- The final email's images depend on the configured Cloudinary HTTPS URLs and their continued availability.
+- The sender identity, mailing platform, and production campaign delivery were outside this HTML-template task.
